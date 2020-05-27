@@ -1,0 +1,82 @@
+* {
+	sizing:border-box;
+	cursor: url('cursor/general.cur'), pointer;
+	margin: auto;
+}
+
+iframe{
+	border: 0px;
+	width: 75%;
+	position: absolute;
+	top: 100px;
+	left: 200px;
+	z-index: 1;
+
+}
+
+#logo{
+	position: absolute;
+	z-index: 1;
+	width: 150px;
+	height: 150px;
+	right: 70px;
+	top: 30px;
+}
+
+footer {
+	color: red;
+	top: 10vh;
+}
+/* Slideshow container */
+
+.slideshow-container {
+  /*max-width: 1920px;*/
+  position: relative;
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  height: 100vh;
+}
+
+
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 767px) {
+  iframe{
+	top: 170px;
+	left: 0px;
+	width: 100%;
+  }
+}
+

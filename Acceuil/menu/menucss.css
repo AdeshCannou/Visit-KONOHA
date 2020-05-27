@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+
+
+
+html,body{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  background: rgba(0,0,0,0);
+  cursor: url('../cursor/general.cur'), pointer;
+}
+ul{
+  list-style-type:none;
+  padding: 0;
+  // margin: 25px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content:center;
+}
+  
+.container ul.menu {
+    height: 50px;
+    width: 50px;
+}
+    
+.container ul.menu li {
+      position: relative;
+      background: white;
+      margin: 10px;
+      height: 8px;
+      width: 50px;
+      // border-radius:20px;
+      transition: transform .3s, width .3s;
+    }
+
+.active_menu li:nth-child(1){
+        top: 18px;
+        transform: rotate(135deg);
+        transition: transform .3s;
+}
+
+.active_menu li:nth-child(2){
+        width: 0;
+        // transform: rotate(180deg);
+        transition: width .3s;
+}
+      
+.active_menu li:nth-child(3){
+        bottom: 18px;
+        transform: rotate(-135deg);
+        transition: transform .3s;
+}
+  
+ul.links {
+    overflow:hidden;
+    width: 0;
+    margin-left: 0px;
+    transition: width .4s, margin-left .4s;
+}
+ul.links li{
+      margin: 5px;
+}
+	  
+ul.links li a{
+        color: white;
+        text-decoration:none;
+        transition: color .5s;
+        text-transform:uppercase;
+        font-size:54px;
+        font-family: 'Montserrat', sans-serif;
+        transition: color .5s, margin-left .5s;
+}
+       
+ul.links li a:hover {
+          color: black;
+          margin-left: 20px;
+          transition: color .5s, margin-left .5s;
+}
+		
+  .active_links{
+    width: 470px !important;
+    margin-left: 35px !important;
+    transition: width .4s, margin-left .4s;
+}
+
+@media only screen and (min-device-width: 350px) and (max-device-width: 767px) {
+  ul.links li a{
+	font-size: 35px;
+  }
+	
+  ul.links {
+    overflow: visible;
+  }
+  .container ul.menu{
+	display: none;
+  }
+  body{
+	justify-content: left;
+  }
+}
